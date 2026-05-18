@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Data Form - SAAB RTC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <header class="sindh-header">... (same as index.html) ...</header>
+    <nav class="nav-bar">... (same navigation) ...</nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">📝 TRAINEE BIO-DATA FORM</div>
+            <div class="card-body">
+                <form id="bioDataForm">
+                    <div class="form-group">
+                        <label>Verify First: Enter Roll Number *</label>
+                        <input type="text" id="verifyRollNo" required placeholder="Your assigned Roll Number">
+                        <button type="button" class="btn btn-primary" id="verifyBtn" style="margin-top:10px;">✅ Verify Trainee</button>
+                    </div>
+                    
+                    <div id="verifyResult"></div>
+                    
+                    <div id="formFields" style="display:none;">
+                        <div class="form-group"><label>Full Name *</label><input type="text" id="fullName" required></div>
+                        <div class="form-group"><label>Father's Name *</label><input type="text" id="fatherName" required></div>
+                        <div class="form-group"><label>CNIC Number *</label><input type="text" id="cnic" required></div>
+                        <div class="form-group"><label>Date of Birth</label><input type="date" id="dob"></div>
+                        <div class="form-group"><label>Permanent Address</label><textarea id="address" rows="3"></textarea></div>
+                        <div class="form-group"><label>Mobile Number</label><input type="tel" id="mobile"></div>
+                        <div class="form-group"><label>Batch</label><select id="batch"><option>RC-04/2025</option><option>RC-03/2025</option></select></div>
+                        <button type="submit" class="btn btn-success">💾 Submit Bio-Data</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sindh-footer">...</footer>
+
+    <script>
+        document.getElementById('verifyBtn')?.addEventListener('click', async function() {
+            const rollNo = document.getElementById('verifyRollNo').value;
+            if(rollNo === "RC-24001" || rollNo === "RC-24002" || rollNo === "LSC-23001") {
+                document.getElementById('verifyResult').innerHTML = '<div class="alert alert-success">✅ Verified! You can fill the form.</div>';
+                document.getElementById('formFields').style.display = 'block';
+            } else {
+                document.getElementById('verifyResult').innerHTML = '<div class="alert alert-error">❌ Invalid Roll Number. Contact your instructor.</div>';
+            }
+        });
+        
+        document.getElementById('bioDataForm')?.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            alert('✅ Bio-Data Submitted Successfully! (Demo - Firebase will store it)');
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Data Form - SAAB RTC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <header class="sindh-header">... (same as index.html) ...</header>
+    <nav class="nav-bar">... (same navigation) ...</nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">📝 TRAINEE BIO-DATA FORM</div>
+            <div class="card-body">
+                <form id="bioDataForm">
+                    <div class="form-group">
+                        <label>Verify First: Enter Roll Number *</label>
+                        <input type="text" id="verifyRollNo" required placeholder="Your assigned Roll Number">
+                        <button type="button" class="btn btn-primary" id="verifyBtn" style="margin-top:10px;">✅ Verify Trainee</button>
+                    </div>
+                    
+                    <div id="verifyResult"></div>
+                    
+                    <div id="formFields" style="display:none;">
+                        <div class="form-group"><label>Full Name *</label><input type="text" id="fullName" required></div>
+                        <div class="form-group"><label>Father's Name *</label><input type="text" id="fatherName" required></div>
+                        <div class="form-group"><label>CNIC Number *</label><input type="text" id="cnic" required></div>
+                        <div class="form-group"><label>Date of Birth</label><input type="date" id="dob"></div>
+                        <div class="form-group"><label>Permanent Address</label><textarea id="address" rows="3"></textarea></div>
+                        <div class="form-group"><label>Mobile Number</label><input type="tel" id="mobile"></div>
+                        <div class="form-group"><label>Batch</label><select id="batch"><option>RC-04/2025</option><option>RC-03/2025</option></select></div>
+                        <button type="submit" class="btn btn-success">💾 Submit Bio-Data</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sindh-footer">...</footer>
+
+    <script>
+        document.getElementById('verifyBtn')?.addEventListener('click', async function() {
+            const rollNo = document.getElementById('verifyRollNo').value;
+            if(rollNo === "RC-24001" || rollNo === "RC-24002" || rollNo === "LSC-23001") {
+                document.getElementById('verifyResult').innerHTML = '<div class="alert alert-success">✅ Verified! You can fill the form.</div>';
+                document.getElementById('formFields').style.display = 'block';
+            } else {
+                document.getElementById('verifyResult').innerHTML = '<div class="alert alert-error">❌ Invalid Roll Number. Contact your instructor.</div>';
+            }
+        });
+        
+        document.getElementById('bioDataForm')?.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            alert('✅ Bio-Data Submitted Successfully! (Demo - Firebase will store it)');
+        });
+    </script>
+</body>
+</html>

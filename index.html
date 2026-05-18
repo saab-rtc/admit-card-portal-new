@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAAB RTC Hyderabad - Sindh Police Training Center</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <header class="sindh-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="FB_IMG_1775633103600.jpg" alt="Sindh Police Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>SHAHEED ABDUL AZIZ BULLO</h1>
+                    <p>RECRUIT TRAINING CENTER HYDERABAD</p>
+                    <p>SINDH POLICE</p>
+                </div>
+            </div>
+            <div class="motto">
+                <p>⚡ "Service, Protection, Excellence in Training" ⚡</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link active">🏠 Home</a>
+            <a href="trainee-form.html" class="nav-link">📝 Trainee Bio-Data</a>
+            <a href="admin.html" class="nav-link">🔐 Admin Panel</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Important Notice -->
+        <div class="alert alert-success">
+            📢 <strong>اہم اطلاع:</strong> ریکروٹ کورس RC-04/2025 کی ایڈمٹ کارڈز جاری کردیے گئے ہیں۔
+        </div>
+
+        <!-- Batch Selection -->
+        <div class="card">
+            <div class="card-header">
+                📋 ADMIT CARD & MARKS CERTIFICATE PORTAL
+            </div>
+            <div class="card-body">
+                <div class="batch-selector">
+                    <label>Select Your Batch:</label>
+                    <div class="batch-buttons" id="batchButtons">
+                        <button class="batch-btn" data-batch="LSC-02/2025">LSC Batch-02/2025</button>
+                        <button class="batch-btn" data-batch="LSC-03/2025">LSC Batch-03/2025</button>
+                        <button class="batch-btn" data-batch="RC-02/2025">RC Batch-02/2025</button>
+                        <button class="batch-btn" data-batch="RC-03/2025">RC Batch-03/2025</button>
+                        <button class="batch-btn" data-batch="RC-04/2025">RC Batch-04/2025</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Enter Roll Number:</label>
+                    <input type="text" id="rollNumber" placeholder="e.g., RC-24001">
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+                    <button class="btn btn-primary" id="searchAdmitBtn">🎫 Search Admit Card</button>
+                    <button class="btn btn-success" id="searchMarksBtn">📜 Search Marks Certificate</button>
+                </div>
+
+                <div id="resultDisplay" style="margin-top: 30px;"></div>
+            </div>
+        </div>
+
+        <!-- Center Info -->
+        <div class="card">
+            <div class="card-header">🏢 About SAAB RTC Hyderabad</div>
+            <div class="card-body">
+                <p>Shaheed Abdul Aziz Bullo Recruit Training Center is a premier training institution of Sindh Police, dedicated to producing disciplined and professional police recruits.</p>
+                <br>
+                <p><strong>📍 Address:</strong> Hyderabad, Sindh, Pakistan</p>
+                <p><strong>📞 Support:</strong> +92306-0384231 | mohsinhyd16@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="sindh-footer">
+        <p>© 2025 SAAB RTC Hyderabad - Sindh Police. All Rights Reserved.</p>
+        <p>System Developed by: Mohsin Ali Jamali | For support: +92306-0384231</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

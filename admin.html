@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - SAAB RTC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">🔐 ADMIN LOGIN - SAAB RTC Hyderabad</div>
+            <div class="card-body">
+                <div id="loginBox">
+                    <input type="text" id="adminEmail" placeholder="admin@saabrtc.com" class="form-group"><br>
+                    <input type="password" id="adminPass" placeholder="Password" class="form-group"><br>
+                    <button class="btn btn-primary" onclick="login()">Login</button>
+                    <p><small>Demo: admin@saabrtc.com / admin123</small></p>
+                </div>
+                <div id="adminPanel" style="display:none;">
+                    <h3>📊 Admin Dashboard</h3>
+                    <button class="btn btn-primary" onclick="uploadAdmitCard()">📄 Upload Admit Card (Batch-wise)</button>
+                    <button class="btn btn-success" onclick="viewTrainees()">👥 View All Trainees</button>
+                    <button class="btn btn-info" onclick="announcement()">📢 Post Announcement</button>
+                    <div id="adminResult"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
